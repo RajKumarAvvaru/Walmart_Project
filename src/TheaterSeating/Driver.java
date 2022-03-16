@@ -12,7 +12,6 @@ import java.io.IOException;
 public class Driver {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		Theater theater = new Theater(10);
 		
 		StringBuilder confirmation = new StringBuilder();
@@ -24,10 +23,7 @@ public class Driver {
 		//theater.PrintTheater();
 		System.out.println("input file content...................");
 		while(line!=null) {
-			//System.out.println(line);
-			String[] order = line.split(" ");//splitting the line 
-			//System.out.println(order);
-			System.out.println(order[0]+" "+order[1]);
+			String[] order = line.split(" ");//splitting the line   
 			String reservationIdentifier = order[0];
 			int numberOfSeats = Integer.parseInt(order[1]);
 			confirmation.append(theater.fillSeats(reservationIdentifier, numberOfSeats));
@@ -44,10 +40,8 @@ public class Driver {
 	      b.close();
 	      System.out.println("\nOutput File Path: "+file.getAbsoluteFile()+"\n");
 	} catch (FileNotFoundException e) {
-		// TODO Auto-generated catch block
 		e.printStackTrace();
 	} catch (IOException e1) {
-		// TODO Auto-generated catch block
 		e1.printStackTrace();
 	}
 		 

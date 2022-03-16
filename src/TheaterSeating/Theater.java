@@ -20,7 +20,6 @@ public class Theater {
 	    }
 	  }
 	public void  PrintTheater() {
-		//System.out.println(rows);
 		for(SingleRow row:rows) {
 			System.out.println(row.getEmptySeats()+" "+row.getRowName()+" "+row.getRepresentation());
 			
